@@ -95,8 +95,8 @@ namespace Hackathon_v1
                 {165,0  ,0  ,0  ,0  ,-3 ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,34 ,0  ,0  ,165},
                 {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,34 ,0  ,0  ,165},
                 {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,-3 ,0  ,0  ,144,0  ,0  ,-3 ,0  ,0  ,112,112,112,112,0  ,0  ,0  ,0  ,0  ,34 ,0  ,0  ,165},
-                {165,0  ,0  ,0  ,112,112,112,112,0  ,0  ,0  ,112,112,112,0  ,0  ,0  ,112,165,165,165,165,112,112,0  ,0  ,0  ,34 ,0  ,0  ,165},
-                {165,112,112,112,165,165,165,165,112,112,112,165,165,165,112,112,112,165,165,165,165,165,165,165,112,112,112,112,112,112,112}
+                {165,0  ,0  ,0  ,35 ,112,112,9  ,0  ,0  ,0  ,112,112,112,0  ,0  ,0  ,112,165,165,165,165,112,112,0  ,0  ,0  ,34 ,0  ,0  ,165},
+                {165,112,112,112,22 ,165,165,164,112,112,112,165,165,165,112,112,112,165,165,165,165,165,165,165,112,112,112,112,112,112,112}
             };
 
             //0: Nothing
@@ -108,6 +108,7 @@ namespace Hackathon_v1
             //6: Exit
             //7: Upwards Slope /
             //8: Downwards Slope \
+            //9: Second Collide (Items and whatnot)
             collisions = new int[,]{
                 {1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0 , 0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
                 {1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
@@ -118,14 +119,14 @@ namespace Hackathon_v1
                 {1  ,2  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
                 {1  ,2  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
                 {1  ,2  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
-                {1  ,2  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
+                {1  ,2  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,9  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
                 {1  ,2  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1 ,1  ,1  ,1  ,1  ,1   ,1  ,1  ,0  ,0  ,0  ,4  ,0  ,0  ,1  },
                 {1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  ,1  ,1  ,2  ,1  ,1  ,1  },
                 {1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,2  ,0  ,0  ,1  },
                 {1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,2  ,0  ,0  ,1  },
-                {1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  ,0  ,0  ,0  ,0  ,0  ,1  ,1  ,1  ,1  ,0  ,0  ,0  ,0  ,0  ,2  ,0  ,0  ,1  },
-                {1  ,0  ,0  ,0  ,1  ,1  ,1  ,1  ,0  ,0  ,0  ,1  ,1  ,1  ,0  ,0  ,0  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,0  ,0  ,0  ,2  ,0  ,0  ,1  },
-                {1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,2  ,1  ,1  ,1  }
+                {1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,9  ,0  ,0  ,0  ,0  ,0  ,1  ,1  ,1  ,1  ,0  ,0  ,0  ,0  ,0  ,2  ,0  ,0  ,1  },
+                {1  ,0  ,0  ,0  ,7  ,1  ,1  ,8  ,0  ,0  ,0  ,1  ,1  ,1  ,0  ,0  ,0  ,1  ,0  ,0  ,0  ,0  ,1  ,1  ,0  ,0  ,0  ,2  ,0  ,0  ,1  },
+                {1  ,1  ,1  ,1  ,1  ,0  ,0  ,1  ,1  ,1  ,1  ,0  ,0  ,0  ,1  ,1  ,1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  ,1  ,1  ,2  ,1  ,1  ,1  }
             };
 
             worldOffset = new Vector2(1, -screenBounds.Height / 70f + 16.8f);
@@ -171,9 +172,11 @@ namespace Hackathon_v1
             charPos += charSpd;
 
             int bottom_index_y = (int)((charPos.Y + 102) / 70);
+            int above_ground_index_y = (int)((charPos.Y + 90) / 70);
             int top_index_y = (int)((charPos.Y) / 70);
             int right_index_x = (int)((charPos.X + 65) / 70);
             int left_index_x = (int)((charPos.X) / 70);
+
             int right_edge = level.GetLength(1);
             int bottom_edge = level.GetLength(0);
             int collide = 0;
@@ -268,7 +271,7 @@ namespace Hackathon_v1
                         charFlip = true;
                         for (int i = bottom_index_y; i < bottom_edge; i++)
                         {
-                            if(level[i, left_index_x] == 112)
+                            if(collisions[i, left_index_x] == 1)
                             {
                                 charFlip = !charFlip;
                             }
@@ -282,20 +285,21 @@ namespace Hackathon_v1
                             charStep = 0.0f;
                         }
                     }
-                    //check slope
-                    if (isSlope(top_index_y, right_index_x))
+                    //check up slope
+                    if (isSlope(above_ground_index_y, right_index_x) || isSlope(bottom_index_y, left_index_x))
                     {
-                        collide++;
-                        if (collisions[top_index_y, right_index_x] == 7)
+                        //collide++;
+                        if (collisions[above_ground_index_y, right_index_x] == 7)
                         {
-                            float diff = -charPos.X + right_index_x*70 - 60;
-                            charPos.Y = top_index_y * 70 - 50 + diff;
-                            //charSpd.X -= 0.01f;
+                            float diff = -charPos.X + right_index_x*70 - 40;
+                            charPos.Y = above_ground_index_y * 70 - 50 +diff;
+                            charSpd.X -= 0.01f;
                         }
-                        else if (collisions[top_index_y, right_index_x] == 8)
+                        else if (collisions[bottom_index_y, left_index_x] == 8)
                         {
-                            charPos.Y = bottom_index_y * 70 - 102;
-                            //charSpd.X += 0.01f;
+                            float diff = charPos.X - left_index_x * 70 + 10;
+                            charPos.Y = bottom_index_y * 70 - 102 + diff;
+                            charSpd.X += 0.01f;
                         }
 
                         checkInput(keyboard);
@@ -346,7 +350,7 @@ namespace Hackathon_v1
             {
                 return false;
             }
-            if (collisions[y, x] == 1)
+            if (collisions[y, x] == 1 || collisions[y, x] == 9)
             {
                 return true;
             }

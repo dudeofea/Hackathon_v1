@@ -7,8 +7,8 @@
       <Importer>EffectImporter</Importer>
       <Processor>EffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\effects.xnb</Output>
-      <Time>2013-11-24T00:22:10.6084502-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\effects.xnb</Output>
+      <Time>2013-11-23T10:11:22.8059798-07:00</Time>
     </Item>
     <Item>
       <Source>bg.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\bg.xnb</Output>
-      <Time>2013-11-24T00:22:10.6074485-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\bg.xnb</Output>
+      <Time>2013-11-23T12:41:36.7354731-07:00</Time>
     </Item>
     <Item>
       <Source>tiles_spritesheet.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\tiles_spritesheet.xnb</Output>
-      <Time>2013-11-24T00:22:10.6224619-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\tiles_spritesheet.xnb</Output>
+      <Time>2013-11-23T12:58:26.5533192-07:00</Time>
     </Item>
     <Item>
       <Source>p1_walk.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\p1_walk.xnb</Output>
-      <Time>2013-11-24T00:22:10.6194603-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\p1_walk.xnb</Output>
+      <Time>2013-11-23T14:17:35.8381378-07:00</Time>
     </Item>
     <Item>
       <Source>p3_walk.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\p3_walk.xnb</Output>
-      <Time>2013-11-24T00:22:10.6204601-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\p3_walk.xnb</Output>
+      <Time>2013-11-23T20:18:40.4175919-07:00</Time>
     </Item>
     <Item>
       <Source>hud_0.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_0.xnb</Output>
-      <Time>2013-11-24T00:22:10.60945-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_0.xnb</Output>
+      <Time>2013-11-23T22:03:40.8399286-07:00</Time>
     </Item>
     <Item>
       <Source>hud_1.png</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_1.xnb</Output>
-      <Time>2013-11-24T00:22:10.60945-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_1.xnb</Output>
+      <Time>2013-11-23T22:03:40.8149365-07:00</Time>
     </Item>
     <Item>
       <Source>hud_2.png</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_2.xnb</Output>
-      <Time>2013-11-24T00:22:10.60945-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_2.xnb</Output>
+      <Time>2013-11-23T22:03:40.8169583-07:00</Time>
     </Item>
     <Item>
       <Source>hud_3.png</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_3.xnb</Output>
-      <Time>2013-11-24T00:22:10.6104507-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_3.xnb</Output>
+      <Time>2013-11-23T22:03:40.8199342-07:00</Time>
     </Item>
     <Item>
       <Source>hud_4.png</Source>
@@ -88,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_4.xnb</Output>
-      <Time>2013-11-24T00:22:10.6104507-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_4.xnb</Output>
+      <Time>2013-11-23T22:03:40.8229563-07:00</Time>
     </Item>
     <Item>
       <Source>hud_5.png</Source>
@@ -97,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_5.xnb</Output>
-      <Time>2013-11-24T00:22:10.6104507-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_5.xnb</Output>
+      <Time>2013-11-23T22:03:40.8259239-07:00</Time>
     </Item>
     <Item>
       <Source>hud_6.png</Source>
@@ -106,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_6.xnb</Output>
-      <Time>2013-11-24T00:22:10.6114517-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_6.xnb</Output>
+      <Time>2013-11-23T22:03:40.82894-07:00</Time>
     </Item>
     <Item>
       <Source>hud_7.png</Source>
@@ -115,8 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_7.xnb</Output>
-      <Time>2013-11-24T00:22:10.6114517-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_7.xnb</Output>
+      <Time>2013-11-23T22:03:40.831929-07:00</Time>
     </Item>
     <Item>
       <Source>hud_8.png</Source>
@@ -124,8 +124,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_8.xnb</Output>
-      <Time>2013-11-24T00:22:10.6114517-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_8.xnb</Output>
+      <Time>2013-11-23T22:03:40.8349256-07:00</Time>
     </Item>
     <Item>
       <Source>hud_9.png</Source>
@@ -133,8 +133,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_9.xnb</Output>
-      <Time>2013-11-24T00:22:10.6124525-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_9.xnb</Output>
+      <Time>2013-11-23T22:03:40.8379251-07:00</Time>
     </Item>
     <Item>
       <Source>logo.png</Source>
@@ -142,8 +142,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\logo.xnb</Output>
-      <Time>2013-11-24T00:22:10.6124525-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\logo.xnb</Output>
+      <Time>2013-11-23T22:20:40.8252156-07:00</Time>
     </Item>
     <Item>
       <Source>Coin.png</Source>
@@ -151,8 +151,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\Coin.xnb</Output>
-      <Time>2013-11-24T00:22:10.6044448-07:00</Time>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\Coin.xnb</Output>
+      <Time>2013-11-23T22:38:02.9734738-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -160,10 +160,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1Content\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -191,8 +191,8 @@
         <Value>2010-08-23T12:41:18-06:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2013-05-06T22:15:53.6615768-06:00</Value>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2013-05-25T01:08:17.7385578-06:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
