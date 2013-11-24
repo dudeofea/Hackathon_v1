@@ -9,3 +9,15 @@ C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\H
 C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\tiles_spritesheet.xnb
 C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\p1_walk.xnb
 C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\p3_walk.xnb
+C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_0.xnb
+C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_1.xnb
+C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_2.xnb
+C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_3.xnb
+C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_4.xnb
+C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_5.xnb
+C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_6.xnb
+C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_7.xnb
+C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_8.xnb
+C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_9.xnb
+C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\logo.xnb
+C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\Coin.xnb

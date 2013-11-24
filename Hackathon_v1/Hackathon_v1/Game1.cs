@@ -21,7 +21,7 @@ namespace Hackathon_v1
         GraphicsDevice device;
         VertexPositionColor[] vertices;
         Effect effect;
-        Texture2D background, tiles, walkingTex;
+        Texture2D background, tiles, walkingTex, coin;
         Rectangle screenBounds;
         int[,] level;
         bool charFlip = false;
@@ -30,14 +30,17 @@ namespace Hackathon_v1
         Vector2 charPos;
         Vector2 charSpd = new Vector2(0, 0);
         Vector2 worldOffset;
+        Texture2D[] hud_nums = new Texture2D[10];
+        int coinCount = 0;
+        float burnTimeout = 0;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferWidth = 1920;
-            graphics.PreferredBackBufferHeight = 1080;
-            graphics.IsFullScreen = true;
+            graphics.PreferredBackBufferWidth = 900;
+            graphics.PreferredBackBufferHeight = 800;
+            graphics.IsFullScreen = false;
             graphics.ApplyChanges();
         }
 
@@ -66,27 +69,32 @@ namespace Hackathon_v1
             effect = Content.Load<Effect>("effects");
             background = Content.Load<Texture2D>("bg");
             walkingTex = Content.Load<Texture2D>("p1_walk");
+            coin = Content.Load<Texture2D>("Coin");
+            for (int i = 0; i < 10; i++)
+            {
+                hud_nums[i] = Content.Load<Texture2D>("hud_" + i.ToString());
+            }
             tiles = Content.Load<Texture2D>("tiles_spritesheet");
             screenBounds = new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
 
             SetUpVertices();
 
             level = new int[,]{
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,-3 ,0  ,-3 ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,-3 ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
                 {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,49 ,0  ,165},
                 {165,0  ,-2 ,0  ,0  ,135,0  ,0  ,0  ,0  ,0  ,0  ,112,112,112,112,112,112,111,112,112,112,111,112,112,28 ,112,0  ,62 ,0  ,165},
                 {165,112,21 ,112,112,111,112,112,0  ,112,112,112,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,112,112,112,165},
                 {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
                 {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,0  ,-3 ,0  ,-3 ,0  ,0  ,0  ,0  ,0  ,-3 ,0  ,0  ,0  ,0  ,0  ,0  ,-3 ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,-3 ,0  ,0  ,0  ,0  ,165},
                 {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,144,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
-                {165,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,28 ,112,112,112,112,112,112,0  ,0  ,0  ,0  ,-1 ,0  ,0  ,165},
+                {165,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,28 ,112,112,112,112,112,112,112,0  ,0  ,0  ,-1 ,0  ,0  ,165},
                 {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,112,112,112,34 ,112,112,165},
+                {165,0  ,0  ,0  ,0  ,-3 ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,34 ,0  ,0  ,165},
                 {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,34 ,0  ,0  ,165},
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,34 ,0  ,0  ,165},
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,144,0  ,0  ,0  ,0  ,0  ,112,112,112,112,0  ,0  ,0  ,0  ,0  ,34 ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,-3 ,0  ,0  ,144,0  ,0  ,-3 ,0  ,0  ,112,112,112,112,0  ,0  ,0  ,0  ,0  ,34 ,0  ,0  ,165},
                 {165,0  ,0  ,0  ,112,112,112,112,0  ,0  ,0  ,112,112,112,0  ,0  ,0  ,112,165,165,165,165,112,112,0  ,0  ,0  ,34 ,0  ,0  ,165},
                 {165,112,112,112,165,165,165,165,112,112,112,165,165,165,112,112,112,165,165,165,165,165,165,165,112,112,112,112,112,112,112}
             };
@@ -140,7 +148,13 @@ namespace Hackathon_v1
             int right_edge = level.GetLength(1);
             int bottom_edge = level.GetLength(0);
             int collide = 0;
-            charColor = Color.White;
+
+            burnTimeout -= (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+            if (burnTimeout < 0)
+            {
+                burnTimeout = 0;
+                charColor = Color.White;
+            }
 
             //for moving camera
             if (left_index_x > 4 && left_index_x < right_edge - 10)
@@ -174,13 +188,24 @@ namespace Hackathon_v1
                 else if (level[bottom_index_y, left_index_x] == -2)
                 {
                     charSpd = new Vector2(2f, -2f);
+                }//coin capture
+                else if (level[top_index_y, left_index_x] == -3)
+                {
+                    coinCount++;
+                    level[top_index_y, left_index_x] = 0;
                 }
                 else
                 {
                     //burn trap
-                    if (level[top_index_y, left_index_x] == 28 || level[bottom_index_y, left_index_x] == 28)
+                    if (burnTimeout <= 0 && (level[top_index_y, left_index_x] == 28 || level[bottom_index_y, left_index_x] == 28))
                     {
+                        burnTimeout = 2000;
                         charColor = Color.Red;
+                        coinCount--;
+                        if (coinCount < 0)
+                        {
+                            coinCount = 0;
+                        }
                     }
                     //check right wall
                     if ((isSolid(top_index_y, right_index_x) || isSolid(top_index_y + 1, right_index_x)))
@@ -286,6 +311,20 @@ namespace Hackathon_v1
             }
         }
 
+        //works for numbers from 0 to 99
+        protected void DrawNumber(int x, int y, int num)
+        {
+            if (num > 9)
+            {
+                spriteBatch.Draw(hud_nums[num / 10], new Rectangle(x + 30, y, 30, 38), new Rectangle(0, 0, 30, 38), Color.White);
+                spriteBatch.Draw(hud_nums[num % 10], new Rectangle(x, y, 30, 38), new Rectangle(0, 0, 30, 38), Color.White);
+            }
+            else
+            {
+                spriteBatch.Draw(hud_nums[num], new Rectangle(x + 30, y, 30, 38), new Rectangle(0, 0, 30, 38), Color.White);
+            }
+        }
+
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
@@ -303,9 +342,15 @@ namespace Hackathon_v1
                     {
                         DrawTile(j, i, level[i, j] - 1);
                     }
+                    else if (level[i, j] == -3)
+                    {
+                        spriteBatch.Draw(coin, new Rectangle((int)((j - worldOffset.X) * 70), (int)((i - worldOffset.Y) * 70) - 10, 70, 70), new Rectangle(0, 0, 70, 70), Color.White);
+                    }
                 }
             }
             DrawWalk((int)charStep);
+            DrawNumber(40, screenBounds.Height - 40, coinCount);
+            spriteBatch.Draw(coin, new Rectangle(0, screenBounds.Height - 50, 50, 50), new Rectangle(0, 0, 70, 70), Color.White);
             spriteBatch.End();
 
             base.Draw(gameTime);
