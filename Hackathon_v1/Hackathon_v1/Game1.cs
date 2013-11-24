@@ -39,7 +39,7 @@ namespace Hackathon_v1
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferWidth = 900;
-            graphics.PreferredBackBufferHeight = 800;
+            graphics.PreferredBackBufferHeight = 700;
             graphics.IsFullScreen = false;
             graphics.ApplyChanges();
         }
@@ -89,9 +89,9 @@ namespace Hackathon_v1
                 {165,0  ,34 ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
                 {165,0  ,34 ,0  ,0  ,-3 ,0  ,-3 ,0  ,0  ,0  ,0  ,0  ,-3 ,0  ,0  ,0  ,0  ,0  ,0  ,-3 ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
                 {165,0  ,34 ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,-3 ,0  ,0  ,0  ,0  ,165},
-                {165,0  ,34 ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,144,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
-                {165,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,28 ,112,112,112,112,112,112,112,0  ,0  ,0  ,21 ,0  ,0  ,165},
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,112,112,112,34 ,112,112,165},
+                {165,0  ,34 ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,144,0  ,0  ,0  ,0  ,0  ,0  ,0  ,35 ,112,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
+                {165,112,112,112,112,112,112,112,112,112,112,112,112,112,28 ,112,112,112,22 ,165,112,112,112,9  ,0  ,0  ,0  ,21 ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,164,112,112,112,34 ,112,112,165},
                 {165,0  ,0  ,0  ,0  ,-3 ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,34 ,0  ,0  ,165},
                 {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,34 ,0  ,0  ,165},
                 {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,-3 ,0  ,0  ,144,0  ,0  ,-3 ,0  ,0  ,112,112,112,112,0  ,0  ,0  ,0  ,0  ,34 ,0  ,0  ,165},
@@ -119,9 +119,9 @@ namespace Hackathon_v1
                 {1  ,2  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
                 {1  ,2  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
                 {1  ,2  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
-                {1  ,2  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,9  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
-                {1  ,2  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1 ,1  ,1  ,1  ,1  ,1   ,1  ,1  ,0  ,0  ,0  ,4  ,0  ,0  ,1  },
-                {1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  ,1  ,1  ,2  ,1  ,1  ,1  },
+                {1  ,2  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,9  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,7  ,9  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
+                {1  ,2  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,1  ,8  ,0  ,0  ,0  ,4  ,0  ,0  ,1  },
+                {1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  ,1  ,1  ,1  ,2  ,1  ,1  ,1  },
                 {1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,2  ,0  ,0  ,1  },
                 {1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,2  ,0  ,0  ,1  },
                 {1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,9  ,0  ,0  ,0  ,0  ,0  ,1  ,1  ,1  ,1  ,0  ,0  ,0  ,0  ,0  ,2  ,0  ,0  ,1  },
@@ -286,20 +286,33 @@ namespace Hackathon_v1
                         }
                     }
                     //check up slope
-                    if (isSlope(above_ground_index_y, right_index_x) || isSlope(bottom_index_y, left_index_x))
+                    if (isSlope(above_ground_index_y, right_index_x) || isSlope(bottom_index_y, left_index_x) || 
+                        isSlope(above_ground_index_y, left_index_x) || isSlope(bottom_index_y, right_index_x))
                     {
-                        //collide++;
+                        //for going up the slope
                         if (collisions[above_ground_index_y, right_index_x] == 7)
                         {
                             float diff = -charPos.X + right_index_x*70 - 40;
                             charPos.Y = above_ground_index_y * 70 - 50 +diff;
-                            charSpd.X -= 0.01f;
-                        }
+                            //charSpd.X -= 0.01f;
+                        }//for going down the slope
                         else if (collisions[bottom_index_y, left_index_x] == 8)
                         {
                             float diff = charPos.X - left_index_x * 70 + 10;
                             charPos.Y = bottom_index_y * 70 - 102 + diff;
-                            charSpd.X += 0.01f;
+                            //charSpd.X += 0.01f;
+                        }//for going up the slope
+                        else if (collisions[above_ground_index_y, left_index_x] == 8)
+                        {
+                            float diff = charPos.X - left_index_x * 70 - 2;
+                            charPos.Y = above_ground_index_y * 70 - 102 + diff;
+                            //charSpd.X += 0.01f;
+                        }//for going down the slope
+                        else if (collisions[bottom_index_y, left_index_x] == 7)
+                        {
+                            float diff = -charPos.X + left_index_x * 70 + 10;
+                            charPos.Y = bottom_index_y * 70 - 102 + diff;
+                            //charSpd.X += 0.01f;
                         }
 
                         checkInput(keyboard);
