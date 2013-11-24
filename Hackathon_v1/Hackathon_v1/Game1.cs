@@ -106,11 +106,13 @@ namespace Hackathon_v1
             //4: Thrust Left
             //5: Thrust Right
             //6: Exit
+            //7: Upwards Slope /
+            //8: Downwards Slope \
             collisions = new int[,]{
                 {1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0 , 0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
                 {1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
                 {1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,6  ,0  ,1  },
-                {1  ,5  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0   ,0  ,1  ,1  ,1  ,1  ,1  ,1  ,3  ,1  ,1  ,1  ,3  ,1  ,1  ,1  ,1  ,0  ,6  ,0  ,1  },
+                {1  ,5  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  ,1  ,1  ,1  ,1  ,1  ,3  ,1  ,1  ,1  ,3  ,1  ,1  ,1  ,1  ,0  ,6  ,0  ,1  },
                 {1  ,2  ,0  ,1  ,1  ,1  ,1  ,3  ,3  ,1  ,1  ,1  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  ,1  ,1  ,1  },
                 {1  ,2  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
                 {1  ,2  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,1  },
@@ -259,7 +261,7 @@ namespace Hackathon_v1
                     {
                         collide++;
                         charSpd.Y = 0f;
-                        charPos.Y = bottom_index_y * 70 - 102;
+                        charPos.Y = bottom_index_y*70 - 102;
                         charSpd.X *= 0.99f;
 
                         //check direction
@@ -272,27 +274,31 @@ namespace Hackathon_v1
                             }
                         }
 
-                        if (keyboard.IsKeyDown(Keys.W))
-                        {
-                            charSpd += new Vector2(0, -7f);
-                        }
-                        if (keyboard.IsKeyDown(Keys.D))
-                        {
-                            if (charFlip)
-                            {
-                                charSpd.X -= 0.1f;
-                            }
-                            else
-                            {
-                                charSpd.X += 0.1f;
-                            }
-                        }
+                        checkInput(keyboard);
 
                         charStep += Math.Abs(charSpd.X / 10f);
                         if (charStep > 5.0f)
                         {
                             charStep = 0.0f;
                         }
+                    }
+                    //check slope
+                    if (isSlope(top_index_y, right_index_x))
+                    {
+                        collide++;
+                        if (collisions[top_index_y, right_index_x] == 7)
+                        {
+                            float diff = -charPos.X + right_index_x*70 - 60;
+                            charPos.Y = top_index_y * 70 - 50 + diff;
+                            //charSpd.X -= 0.01f;
+                        }
+                        else if (collisions[top_index_y, right_index_x] == 8)
+                        {
+                            charPos.Y = bottom_index_y * 70 - 102;
+                            //charSpd.X += 0.01f;
+                        }
+
+                        checkInput(keyboard);
                     }
                 }
             }
@@ -303,7 +309,7 @@ namespace Hackathon_v1
 
             if (collide == 0)
             {
-                charSpd += new Vector2(0.01f, 0.2f);
+                charSpd += new Vector2(0.0f, 0.2f);
                 charStep = 5;
             }
             else if (collide > 1)
@@ -314,6 +320,25 @@ namespace Hackathon_v1
             base.Update(gameTime);
         }
 
+        protected void checkInput(KeyboardState keyboard)
+        {
+            if (keyboard.IsKeyDown(Keys.W))
+            {
+                charSpd += new Vector2(0, -7f);
+            }
+            if (keyboard.IsKeyDown(Keys.D))
+            {
+                if (charFlip)
+                {
+                    charSpd.X -= 0.1f;
+                }
+                else
+                {
+                    charSpd.X += 0.1f;
+                }
+            }
+        }
+
         //check if you can fall through the selected tile
         protected bool isSolid(int y, int x)
         {
@@ -322,6 +347,19 @@ namespace Hackathon_v1
                 return false;
             }
             if (collisions[y, x] == 1)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        protected bool isSlope(int y, int x)
+        {
+            if (x < 0 || x > level.GetLength(1))
+            {
+                return false;
+            }
+            if(collisions[y, x] == 7 || collisions[y, x] == 8)
             {
                 return true;
             }
@@ -352,8 +390,8 @@ namespace Hackathon_v1
         {
             if (num > 9)
             {
-                spriteBatch.Draw(hud_nums[num / 10], new Rectangle(x + 30, y, 30, 38), new Rectangle(0, 0, 30, 38), Color.White);
-                spriteBatch.Draw(hud_nums[num % 10], new Rectangle(x, y, 30, 38), new Rectangle(0, 0, 30, 38), Color.White);
+                spriteBatch.Draw(hud_nums[num % 10], new Rectangle(x + 30, y, 30, 38), new Rectangle(0, 0, 30, 38), Color.White);
+                spriteBatch.Draw(hud_nums[num / 10], new Rectangle(x, y, 30, 38), new Rectangle(0, 0, 30, 38), Color.White);
             }
             else
             {
