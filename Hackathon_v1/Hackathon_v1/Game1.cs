@@ -218,11 +218,18 @@ namespace Hackathon_v1
                 {
                     charFlip = false;
                     charSpd = new Vector2(-2f, -2f);
-                }//coin capture
+                }//coin capture 1
                 else if (level[top_index_y, left_index_x] == -3)
                 {
                     coinCount++;
+
                     level[top_index_y, left_index_x] = 0;
+                }//coin count 2
+                else if (level[top_index_y, right_index_x] == -3)
+                {
+                    coinCount++;
+
+                    level[top_index_y, right_index_x] = 0;
                 }//this is the exit
                 else if (collisions[bottom_index_y, left_index_x] == 6)
                 {
@@ -310,7 +317,7 @@ namespace Hackathon_v1
                         }//for going down the slope
                         else if (collisions[bottom_index_y, left_index_x] == 7)
                         {
-                            float diff = -charPos.X + left_index_x * 70 + 10;
+                            float diff = -charPos.X + left_index_x * 70 + 20;
                             charPos.Y = bottom_index_y * 70 - 102 + diff;
                             //charSpd.X += 0.01f;
                         }
