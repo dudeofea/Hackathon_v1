@@ -8,7 +8,7 @@
       <Processor>EffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\effects.xnb</Output>
-      <Time>2013-11-24T00:08:07.0520592-07:00</Time>
+      <Time>2013-11-24T00:22:10.6084502-07:00</Time>
     </Item>
     <Item>
       <Source>bg.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\bg.xnb</Output>
-      <Time>2013-11-24T00:08:07.0510578-07:00</Time>
+      <Time>2013-11-24T00:22:10.6074485-07:00</Time>
     </Item>
     <Item>
       <Source>tiles_spritesheet.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\tiles_spritesheet.xnb</Output>
-      <Time>2013-11-24T00:08:07.0660718-07:00</Time>
+      <Time>2013-11-24T00:22:10.6224619-07:00</Time>
     </Item>
     <Item>
       <Source>p1_walk.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\p1_walk.xnb</Output>
-      <Time>2013-11-24T00:08:07.06407-07:00</Time>
+      <Time>2013-11-24T00:22:10.6194603-07:00</Time>
     </Item>
     <Item>
       <Source>p3_walk.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\p3_walk.xnb</Output>
-      <Time>2013-11-24T00:08:07.06407-07:00</Time>
+      <Time>2013-11-24T00:22:10.6204601-07:00</Time>
     </Item>
     <Item>
       <Source>hud_0.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_0.xnb</Output>
-      <Time>2013-11-24T00:08:07.0530596-07:00</Time>
+      <Time>2013-11-24T00:22:10.60945-07:00</Time>
     </Item>
     <Item>
       <Source>hud_1.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_1.xnb</Output>
-      <Time>2013-11-24T00:08:07.0530596-07:00</Time>
+      <Time>2013-11-24T00:22:10.60945-07:00</Time>
     </Item>
     <Item>
       <Source>hud_2.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_2.xnb</Output>
-      <Time>2013-11-24T00:08:07.0530596-07:00</Time>
+      <Time>2013-11-24T00:22:10.60945-07:00</Time>
     </Item>
     <Item>
       <Source>hud_3.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_3.xnb</Output>
-      <Time>2013-11-24T00:08:07.05406-07:00</Time>
+      <Time>2013-11-24T00:22:10.6104507-07:00</Time>
     </Item>
     <Item>
       <Source>hud_4.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_4.xnb</Output>
-      <Time>2013-11-24T00:08:07.05406-07:00</Time>
+      <Time>2013-11-24T00:22:10.6104507-07:00</Time>
     </Item>
     <Item>
       <Source>hud_5.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_5.xnb</Output>
-      <Time>2013-11-24T00:08:07.0550616-07:00</Time>
+      <Time>2013-11-24T00:22:10.6104507-07:00</Time>
     </Item>
     <Item>
       <Source>hud_6.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_6.xnb</Output>
-      <Time>2013-11-24T00:08:07.0550616-07:00</Time>
+      <Time>2013-11-24T00:22:10.6114517-07:00</Time>
     </Item>
     <Item>
       <Source>hud_7.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_7.xnb</Output>
-      <Time>2013-11-24T00:08:07.0550616-07:00</Time>
+      <Time>2013-11-24T00:22:10.6114517-07:00</Time>
     </Item>
     <Item>
       <Source>hud_8.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_8.xnb</Output>
-      <Time>2013-11-24T00:08:07.0560627-07:00</Time>
+      <Time>2013-11-24T00:22:10.6114517-07:00</Time>
     </Item>
     <Item>
       <Source>hud_9.png</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_9.xnb</Output>
-      <Time>2013-11-24T00:08:07.0560627-07:00</Time>
+      <Time>2013-11-24T00:22:10.6124525-07:00</Time>
     </Item>
     <Item>
       <Source>logo.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\logo.xnb</Output>
-      <Time>2013-11-24T00:08:07.0560627-07:00</Time>
+      <Time>2013-11-24T00:22:10.6124525-07:00</Time>
     </Item>
     <Item>
       <Source>Coin.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\Coin.xnb</Output>
-      <Time>2013-11-24T00:08:07.0490551-07:00</Time>
+      <Time>2013-11-24T00:22:10.6044448-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
