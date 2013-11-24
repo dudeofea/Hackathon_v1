@@ -176,7 +176,7 @@ namespace Hackathon_v1
                 else if (level[top_index_y, right_index_x] == 21 || level[bottom_index_y, right_index_x] == 21)
                 {
                     charSpd = new Vector2(0, -2f);
-                }//ladder right
+                }//water trap
                 else if (level[top_index_y, left_index_x] == 111 || level[bottom_index_y,  left_index_x] == 111)
                 {
                     charSpd = new Vector2(0, 2f);
@@ -238,6 +238,16 @@ namespace Hackathon_v1
                         charSpd.Y = 0f;
                         charPos.Y = bottom_index_y * 70 - 102;
                         charSpd.X *= 0.99f;
+
+                        //check direction
+                        charFlip = true;
+                        for (int i = bottom_index_y; i < bottom_edge; i++)
+                        {
+                            if(level[i, left_index_x] == 112)
+                            {
+                                charFlip = !charFlip;
+                            }
+                        }
 
                         if (keyboard.IsKeyDown(Keys.W))
                         {

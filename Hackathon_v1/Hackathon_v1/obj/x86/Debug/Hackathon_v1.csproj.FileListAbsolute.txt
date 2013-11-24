@@ -21,3 +21,26 @@ C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\H
 C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_9.xnb
 C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\logo.xnb
 C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\Coin.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\effects.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\bg.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\tiles_spritesheet.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\p1_walk.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\p3_walk.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_0.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_1.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_2.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_3.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_4.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_5.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_6.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_7.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_8.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\hud_9.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\logo.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\Coin.xnb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Hackathon_v1.exe
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Hackathon_v1.pdb
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\obj\x86\Debug\Hackathon_v1.csprojResolveAssemblyReference.cache
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\obj\x86\Debug\Hackathon_v1.exe
+C:\Users\Denis\Documents\GitHub\Hackathon_v1\Hackathon_v1\Hackathon_v1\obj\x86\Debug\Hackathon_v1.pdb
