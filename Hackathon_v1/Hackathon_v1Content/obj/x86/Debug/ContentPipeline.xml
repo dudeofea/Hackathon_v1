@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>effects.fx</Source>
+      <Name>effects</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\effects.xnb</Output>
+      <Time>2013-11-23T10:11:22.8059798-07:00</Time>
+    </Item>
+    <Item>
+      <Source>bg.png</Source>
+      <Name>bg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\bg.xnb</Output>
+      <Time>2013-11-23T12:41:36.7354731-07:00</Time>
+    </Item>
+    <Item>
+      <Source>tiles_spritesheet.png</Source>
+      <Name>tiles_spritesheet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\tiles_spritesheet.xnb</Output>
+      <Time>2013-11-23T12:58:26.5533192-07:00</Time>
+    </Item>
+    <Item>
+      <Source>p1_walk.png</Source>
+      <Name>p1_walk</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\p1_walk.xnb</Output>
+      <Time>2013-11-23T14:17:35.8381378-07:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-06:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2013-05-25T01:08:17.7385578-06:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

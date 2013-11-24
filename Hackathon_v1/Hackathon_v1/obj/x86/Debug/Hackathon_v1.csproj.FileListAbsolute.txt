@@ -1,0 +1,10 @@
+c:\users\denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Hackathon_v1.exe
+c:\users\denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Hackathon_v1.pdb
+c:\users\denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\obj\x86\Debug\Hackathon_v1.csprojResolveAssemblyReference.cache
+c:\users\denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\obj\x86\Debug\Hackathon_v1.exe
+c:\users\denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\obj\x86\Debug\Hackathon_v1.pdb
+c:\users\denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\effects.xnb
+C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\bg.xnb
+C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\tiles_spritesheet.xnb
+C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\p1_walk.xnb
