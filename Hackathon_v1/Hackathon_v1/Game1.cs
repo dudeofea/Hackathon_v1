@@ -25,8 +25,9 @@ namespace Hackathon_v1
         Rectangle screenBounds;
         int[,] level;
         bool charFlip = false;
+        Color charColor = Color.White;
         float charStep = 0.0f;               //which step the character is in when walking
-        Vector2 charPos = new Vector2(100, 700);
+        Vector2 charPos;
         Vector2 charSpd = new Vector2(0, 0);
         Vector2 worldOffset;
 
@@ -34,9 +35,9 @@ namespace Hackathon_v1
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferWidth = 900;
-            graphics.PreferredBackBufferHeight = 900;
-            graphics.IsFullScreen = false;
+            graphics.PreferredBackBufferWidth = 1920;
+            graphics.PreferredBackBufferHeight = 1080;
+            graphics.IsFullScreen = true;
             graphics.ApplyChanges();
         }
 
@@ -67,25 +68,31 @@ namespace Hackathon_v1
             walkingTex = Content.Load<Texture2D>("p1_walk");
             tiles = Content.Load<Texture2D>("tiles_spritesheet");
             screenBounds = new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
-            worldOffset = new Vector2(1, 0);
 
             SetUpVertices();
 
             level = new int[,]{
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
-                {165,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,34 ,165},
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,34 ,165},
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,34 ,165},
-                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,144,0  ,0  ,0  ,0  ,0  ,112,112,112,112,0  ,0  ,0  ,0  ,0  ,34 ,165},
-                {165,0  ,0  ,0  ,112,112,112,112,0  ,0  ,0  ,112,112,112,0  ,0  ,0  ,112,165,165,165,165,112,112,0  ,0  ,0  ,34 ,165},
-                {165,112,112,112,165,165,165,165,112,112,112,165,165,165,112,112,112,165,165,165,165,165,165,165,112,112,112,112,112}
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,49 ,0  ,165},
+                {165,0  ,-2 ,0  ,0  ,135,0  ,0  ,0  ,0  ,0  ,0  ,112,112,112,112,112,112,111,112,112,112,111,112,112,28 ,112,0  ,62 ,0  ,165},
+                {165,112,21 ,112,112,111,112,112,0  ,112,112,112,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,112,112,112,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,144,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,165},
+                {165,112,112,112,112,112,112,112,112,112,112,112,112,112,112,112,28 ,112,112,112,112,112,112,0  ,0  ,0  ,0  ,-1 ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,112,112,112,34 ,112,112,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,34 ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,34 ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,0  ,144,0  ,0  ,0  ,0  ,0  ,112,112,112,112,0  ,0  ,0  ,0  ,0  ,34 ,0  ,0  ,165},
+                {165,0  ,0  ,0  ,112,112,112,112,0  ,0  ,0  ,112,112,112,0  ,0  ,0  ,112,165,165,165,165,112,112,0  ,0  ,0  ,34 ,0  ,0  ,165},
+                {165,112,112,112,165,165,165,165,112,112,112,165,165,165,112,112,112,165,165,165,165,165,165,165,112,112,112,112,112,112,112}
             };
+
+            worldOffset = new Vector2(1, -screenBounds.Height / 70f + 16.8f);
+            charPos = new Vector2(100, level.GetLength(0) * 70 - 200);
         }
 
         private void SetUpVertices()
@@ -127,64 +134,100 @@ namespace Hackathon_v1
             charPos += charSpd;
 
             int bottom_index_y = (int)((charPos.Y + 102) / 70);
-            int top_index_y = (int)(charPos.Y / 70);
-            int right_index_x = (int)((charPos.X + 65 - worldOffset.X) / 70);
-            int left_index_x = (int)((charPos.X - worldOffset.X) / 70);
+            int top_index_y = (int)((charPos.Y) / 70);
+            int right_index_x = (int)((charPos.X + 65) / 70);
+            int left_index_x = (int)((charPos.X) / 70);
             int right_edge = level.GetLength(1);
+            int bottom_edge = level.GetLength(0);
             int collide = 0;
+            charColor = Color.White;
 
+            //for moving camera
             if (left_index_x > 4 && left_index_x < right_edge - 10)
             {
                 worldOffset.X = charPos.X / 70 - 4;
             }
-
-            if (left_index_x >= 0 && right_index_x < right_edge)
+            if (top_index_y < bottom_edge - 4)
             {
-                //check right wall
-                if ((isSolid(top_index_y, right_index_x) || isSolid(top_index_y + 1, right_index_x)))
-                {
-                    collide++;
-                    charSpd.X = -charSpd.X * 0.2f;
-                }
-                //check left wall
-                if ((isSolid(top_index_y, left_index_x) || isSolid(top_index_y + 1, left_index_x)))
-                {
-                    collide++;
-                    charSpd.X = -charSpd.X * 0.2f;
-                }
-                //check ceiling
-                if ((isSolid(top_index_y, left_index_x) || isSolid(top_index_y, left_index_x + 1)))
-                {
-                    collide++;
-                    charSpd.Y = -charSpd.Y * 0.5f;
-                }
-                //check floor
-                if ((isSolid(bottom_index_y, left_index_x) || isSolid(bottom_index_y, left_index_x + 1)))
-                {
-                    collide++;
-                    charSpd.Y = 0f;
-                    charPos.Y = bottom_index_y * 70 - 102;
-                    charSpd.X *= 0.99f;
+                worldOffset.Y = (charPos.Y - screenBounds.Height) / 70 + 3.8f;
+            }
 
-                    if (keyboard.IsKeyDown(Keys.W))
+            if (left_index_x >= 0 && right_index_x < right_edge - 1)
+            {
+                //ladder right
+                if (level[top_index_y, left_index_x] == 34 || level[bottom_index_y, left_index_x] == 34)
+                {
+                    charSpd = new Vector2(0, -2f);
+                }//ladder right
+                else if (level[top_index_y, right_index_x] == 21 || level[bottom_index_y, right_index_x] == 21)
+                {
+                    charSpd = new Vector2(0, -2f);
+                }//ladder right
+                else if (level[top_index_y, left_index_x] == 111 || level[bottom_index_y,  left_index_x] == 111)
+                {
+                    charSpd = new Vector2(0, 2f);
+                }//top of ladder for throwing left
+                else if (level[bottom_index_y, left_index_x] == -1)
+                {
+                    charSpd = new Vector2(-2f, -2f);
+                }//top of ladder for throwing right
+                else if (level[bottom_index_y, left_index_x] == -2)
+                {
+                    charSpd = new Vector2(2f, -2f);
+                }
+                else
+                {
+                    //burn trap
+                    if (level[top_index_y, left_index_x] == 28 || level[bottom_index_y, left_index_x] == 28)
                     {
-                        charSpd += new Vector2(0, -7f);
+                        charColor = Color.Red;
                     }
-                    if (keyboard.IsKeyDown(Keys.A))
+                    //check right wall
+                    if ((isSolid(top_index_y, right_index_x) || isSolid(top_index_y + 1, right_index_x)))
                     {
-                        charSpd.X -= 0.1f;
-                        charFlip = true;
+                        collide++;
+                        charSpd.X = -charSpd.X * 0.2f;
                     }
-                    if (keyboard.IsKeyDown(Keys.D))
+                    //check left wall
+                    if ((isSolid(top_index_y, left_index_x) || isSolid(top_index_y + 1, left_index_x)))
                     {
-                        charSpd.X += 0.1f;
-                        charFlip = false;
+                        collide++;
+                        charSpd.X = -charSpd.X * 0.2f;
                     }
+                    //check ceiling
+                    if ((isSolid(top_index_y, left_index_x) || isSolid(top_index_y, left_index_x + 1)))
+                    {
+                        collide++;
+                        charSpd.Y = -charSpd.Y * 0.5f;
+                    }
+                    //check floor
+                    if ((isSolid(bottom_index_y, left_index_x) || isSolid(bottom_index_y, left_index_x + 1)))
+                    {
+                        collide++;
+                        charSpd.Y = 0f;
+                        charPos.Y = bottom_index_y * 70 - 102;
+                        charSpd.X *= 0.99f;
 
-                    charStep += Math.Abs(charSpd.X / 10f);
-                    if (charStep > 5.0f)
-                    {
-                        charStep = 0.0f;
+                        if (keyboard.IsKeyDown(Keys.W))
+                        {
+                            charSpd += new Vector2(0, -7f);
+                        }
+                        if (keyboard.IsKeyDown(Keys.A))
+                        {
+                            charSpd.X -= 0.1f;
+                            charFlip = true;
+                        }
+                        if (keyboard.IsKeyDown(Keys.D))
+                        {
+                            charSpd.X += 0.1f;
+                            charFlip = false;
+                        }
+
+                        charStep += Math.Abs(charSpd.X / 10f);
+                        if (charStep > 5.0f)
+                        {
+                            charStep = 0.0f;
+                        }
                     }
                 }
             }
@@ -196,7 +239,7 @@ namespace Hackathon_v1
             if (collide == 0)
             {
                 charSpd += new Vector2(0.01f, 0.2f);
-                charStep = 0;
+                charStep = 5;
             }
             else if (collide > 1)
             {
@@ -212,6 +255,10 @@ namespace Hackathon_v1
             if (x < 0 || x > level.GetLength(1))
             {
                 return false;
+            }//for utility blocks
+            if (level[y, x] == 34 || level[y, x] == 21 || level[y, x] == 49 || level[y, x] == 62 || level[y, x] == 111)
+            {
+                return false;
             }
             if (level[y, x] > 0)
             {
@@ -224,18 +271,18 @@ namespace Hackathon_v1
         //tiles are offset from the top-left corner
         protected void DrawTile(int x, int y, int tile)
         {
-            spriteBatch.Draw(tiles, new Rectangle((int)((x - worldOffset.X) * 70), y * 70 - 10, 70, 70), new Rectangle((tile%13) * 72, (int)(tile/13) * 72, 70, 70), Color.White);
+            spriteBatch.Draw(tiles, new Rectangle((int)((x - worldOffset.X) * 70), (int)((y - worldOffset.Y) * 70) - 10, 70, 70), new Rectangle((tile%13) * 72, (int)(tile/13) * 72, 70, 70), Color.White);
         }
 
         protected void DrawWalk(int step)
         {
             if (!charFlip)
             {
-                spriteBatch.Draw(walkingTex, new Rectangle((int)(charPos.X - worldOffset.X * 70), (int)charPos.Y, 65, 92), new Rectangle((step % 3) * 67, (int)(step / 3) * 92, 65, 92), Color.White);
+                spriteBatch.Draw(walkingTex, new Rectangle((int)(charPos.X - worldOffset.X * 70), (int)(charPos.Y - worldOffset.Y * 70), 65, 92), new Rectangle((step % 3) * 67, (int)(step / 3) * 92, 65, 92), charColor);
             }
             else
             {
-                spriteBatch.Draw(walkingTex, new Rectangle((int)(charPos.X - worldOffset.X * 70), (int)charPos.Y, 65, 92), new Rectangle((step % 3) * 67 + 66, (int)(step / 3) * 92, -65, 92), Color.White);
+                spriteBatch.Draw(walkingTex, new Rectangle((int)(charPos.X - worldOffset.X * 70), (int)(charPos.Y - worldOffset.Y * 70), 65, 92), new Rectangle((step % 3) * 67 + 66, (int)(step / 3) * 92, -65, 92), charColor);
             }
         }
 
@@ -252,7 +299,7 @@ namespace Hackathon_v1
             {
                 for (int j = 0; j < level.GetLength(1); j++)
                 {
-                    if (level[i, j] != 0)
+                    if (level[i, j] > 0)
                     {
                         DrawTile(j, i, level[i, j] - 1);
                     }

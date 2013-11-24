@@ -37,6 +37,15 @@
       <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\p1_walk.xnb</Output>
       <Time>2013-11-23T14:17:35.8381378-07:00</Time>
     </Item>
+    <Item>
+      <Source>p3_walk.png</Source>
+      <Name>p3_walk</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Denis\documents\visual studio 2010\Projects\Hackathon_v1\Hackathon_v1\Hackathon_v1\bin\x86\Debug\Content\p3_walk.xnb</Output>
+      <Time>2013-11-23T20:18:40.4175919-07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
